@@ -1,0 +1,46 @@
+.email-list-container {
+	padding: 20px 10%;
+}
+.email-row, .sender-details{
+	background-color: white;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: -2px 5px 5px #d6d6d6;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.sender-details{
+	box-shadow: none;
+	margin-bottom: 0;
+	width: 100%;
+}
+.sender-subject {
+	background-color: white;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+.content {
+	padding: 10px;
+	background-color: white;
+    margin-bottom: 5px;
+}
+.email-list-container .ng-scope a:hover {
+	text-decoration: none;
+}
+.light-font {
+	font-size: 14px;
+    color: #7b7b7b;
+}
+.font-bold {
+	font-weight: bold;
+}
+.img-circle {
+	padding: 5px;
+}
+
+/* for email details page */
+.email {
+	font-size: 11px;
+    color: #757171;
+}

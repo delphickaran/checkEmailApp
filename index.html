@@ -1,0 +1,38 @@
+<!DOCTPYE html>
+<html ng-app='mailApp'>
+
+<head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="static/css/index.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.6.0-rc.2/angular-resource.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body style="background-color: #f5f5f5;">
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#/" class="navbar-brand">Inbox</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-home">Home</i></a>
+                    </li>
+                    <li><a href="#/email"><i class="fa fa-mail">mail</i></a>
+                    </li>
+                    <li><a href="#/email-details"><i class="fa fa-mail">email-details</i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container email-list-container">
+        <div ng-view></div>
+    </div>
+</body>
+
+</html>

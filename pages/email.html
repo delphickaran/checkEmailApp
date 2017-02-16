@@ -1,0 +1,16 @@
+
+<h5> Email List </h5>
+<div ng-repeat="email in emails">
+	<a class="row email-row" data-index="{{$index}}" href="#/email-details/{{$index}}">
+		<div class="col-sm-4 col-xs-4">
+			<!-- <img src="http://triangular-api.oxygenna.com/email/inbox/{{email.from.image}}" class="img-circle" alt="Cinque Terre" width="50" height="50" />  -->
+			<img src="static/img/default.jpg" class="img-circle" alt="Cinque Terre" width="50" height="50" />
+		</div>
+		<div class="col-sm-4 col-xs-4 font-bold">
+			{{email.from.name}}
+		</div>
+		<div class="col-sm-4 col-xs-4 light-font">
+			{{ email.subject}}
+		</div>
+	</a>
+</div>

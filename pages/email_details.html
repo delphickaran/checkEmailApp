@@ -1,0 +1,46 @@
+
+<div>
+	<h5> From: </h5>
+	<div class="row">
+		<div class="row sender-details">
+			<div class="col-sm-6 col-xs-6">
+				<!-- <img src="http://triangular-api.oxygenna.com/email/inbox/{{email.from.image}}" class="img-circle" alt="Cinque Terre" width="50" height="50" />  -->
+				<img src="static/img/default.jpg" class="img-circle" alt="Cinque Terre" width="50" height="50" />
+			</div>
+			<div class="col-sm-6 col-xs-6 font-bold">
+				<div>{{emailDetails.from.name}}</div>
+				<span class="email">
+					{{emailDetails.from.email}}
+				</span>
+			</div>
+		</div>
+	</div>
+	<h5 ng-if="emailDetails.cc"> CC</h5>
+	<div ng-if="emailDetails.cc" class="row">
+		
+		<div class="row sender-details" ng-repeat="ccperson in emailDetails.cc">
+			<div class="col-sm-6 col-xs-6">
+				<!-- <img src="http://triangular-api.oxygenna.com/email/inbox/{{email.from.image}}" class="img-circle" alt="Cinque Terre" width="50" height="50" />  -->
+				<img src="static/img/default.jpg" class="img-circle" alt="Cinque Terre" width="50" height="50" />
+			</div>
+			<div class="col-sm-6 col-xs-6 font-bold">
+				<div>{{ccperson.name}}</div>
+				<span class="email">
+					{{ccperson.email}}
+				</span>
+			</div>
+		</div>
+	</div>
+	<h5 ng-if="emailDetails.subject">Subject</h5>
+	<div ng-if="emailDetails.subject" class="row">
+		
+		<div class="row sender-subject">
+			<span>{{emailDetails.subject}}</span>
+		</div>
+	</div>
+	<div  class="row">
+		<div class="row content" ng-repeat="singleContent in emailDetails.content">
+			<span>{{singleContent}}</span>
+		</div>
+	</div>
+</div>
